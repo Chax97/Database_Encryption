@@ -1,0 +1,3 @@
+- when the program reads the current entries in DB_LOAD, if there are already entries it adds those into the array, BUT when there are no entries present, it just skips an index and says there are already 1/50 entries for some reason.
+    --> FIX THIS
+

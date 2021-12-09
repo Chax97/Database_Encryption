@@ -1,0 +1,33 @@
+list all files and their file sizes from smallest to largest
+ls -l -h -S -r
+
+same list but for images folder
+ls /home/images -l -h -S -r
+
+memory allocation available:
+df /home -h
+
+
+
+
+things to fix:
+
+- program wasnt loading entries properly (FIXED)
+- program isn't saving all data to the load file (FIXED)
+- ^ to the read file (FIXED)
+- add crim needs to be fixed to add all information (FIXED)
+- incorporate addimage to addcrim (FIXED)
+- update edit crim to match the fields that add crim works with
+- implement COMPRESSION
+- implement ENCRYPTION
+
+
+
+extra:
+- fix commenting style
+- add multiple runtime modes (i'll explain these later on if we get to it - shaman)
+    -> user mode
+    -> admin mode
+    -> marker mode
+- prevents double inclusions
+

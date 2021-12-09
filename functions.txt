@@ -1,0 +1,128 @@
+FUNCTIONS:
+
+/* Author: eric */
+/*****************************************
+ * This function prints the intial menu with all the instructions on how to use this function
+ * inputs:
+ * - none
+ * outputs:
+ * - none
+ *****************************************/
+void printMenu(void);
+
+
+/* Author: yongqi */
+/*****************************************
+ * This function asks the user a series of questions, and scans the input data, then stores
+ * the information retrieved within a criminal_t structure.
+ * inputs:
+ * - none
+ * outputs:
+ * - none
+ *****************************************/
+void addCriminal(void);
+
+
+/* Author: eric */
+/*****************************************
+ * Edits the information associated with a single criminal stored in the file 
+ * inputs:
+ * - array of criminals
+ * - size of the array
+ * - criminal ID.
+ * outputs:
+ * - none
+ *****************************************/
+void editCriminal(criminal_t criminal[], int size_of_criminals_array, int criminal_id);
+
+
+/* Author: yongqi */
+/*****************************************
+ * This function prints all the info with all criminals in a neat manner
+ * inputs:
+ * - criminals[]
+ * - size_of_criminals_array
+ * outputs:
+ * - none
+ *****************************************/
+void printAllCriminals(criminal_t criminals[], int size_of_criminals_array);
+
+
+/* Author: Olivia */
+/*****************************************
+ * This function takes the matches[] array which any of the search functions edits and it 
+ * prints all the data of the ID's stored within the matches[] array
+ * inputs:
+ * - int matches[] (the array)
+ * - int size_of_matches (size of the array)
+ * outputs:
+ * - none
+ *****************************************/
+void printCriminal(criminal_t criminal[], int size_of_criminals_array, int criminal_id);
+
+
+/* Author: shaman and faisal - UNDER PROGRESS */ 
+/*****************************************
+ * This function searches through the data base for a specific criminal name/DOB
+ * inputs:
+ * - criminal[]
+ * - size_of_criminals_array
+ * - offense[]
+ * - size_of_offense_array
+ *****************************************/
+void sorting_and_searching(criminal_t criminal[], int size_of_criminals_array, char offense[], int size_of_offense_array)
+
+---> feature 4 = index criminals, and print results.
+
+/* shaman */
+/*****************************************
+ * This function asks the user what they want to search by, current
+ * options: name . Takes in the user input which is then
+ * passed to the program 
+ * inputs:
+ * - none (the function gets called at the beginning of the feature)
+ * outputs:
+ * - int (returns an int that determines which search function to use)
+ *****************************************/
+int print_search_by_what(void);
+
+/* faisal */
+/*****************************************
+ * This function prompts the user to input a name and checks the database for any matches
+ * of the name. If there are no matches returns 0, if there are matches, return 1 and store
+ * the matching indexes in an array called matches
+ * inputs: 
+ * - 
+int search_name(criminal_t criminals []);
+
+/* shaman */
+/*****************************************
+ * this function saves all current criminal entries from the criminals[] array
+ * to a database, in the order they were entered into the array.
+ * inputs:
+ * - const criminal_t criminals[] (criminals array, const because no change)
+ * - int arrSize (passing the array size)
+ * - int crimCount (no of criminals entered so far)
+ * outputs:
+ * - none 
+ *****************************************/
+ void saveDatabase (const criminal_t criminals[], int arrSize, int crimCount);
+
+
+
+
+
+/* future functions */
+save to database
+load from database
+
+decryption
+
+compress
+
+decompress
+
+
+
+
+

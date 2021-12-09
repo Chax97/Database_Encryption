@@ -1,0 +1,53 @@
+===========<<< EXTENDED INFORMATION FOR ALL CRIMINALS IN DATABASE >>>===========
+________________________________________________________________________________
+|                     ID: 00                                                   |
+|                   NAME: a a                                                  |
+|                 GENDER: M                                                    |
+|          DATE OF BIRTH: 01/01/0001                                           |
+|                 HEIGHT: 1 cm                                                 |
+|    RESIDENTIAL ADDRESS: 1 as St as as                                        |
+|             OCCUPATION: ok                                                   |
+|CURRENT CRIMINAL STATUS: Fugitive                                             |
+////////////////////////////////////////////////////////////////////////////////
+CRIMINAL HISTORY:
+
+OFFENCE #0:
+DATE OF OFFENSE: 2/2/2
+LOCATION OF OFFENSE: a, a
+DESCRIPTION OF OFFENSE:
+something happened 
+////////////////////////////////////////////////////////////////////////////////
+
+________________________________________________________________________________
+|                     ID: 01                                                   |
+|                   NAME: test test                                            |
+|                 GENDER: F                                                    |
+|          DATE OF BIRTH: 01/01/0001                                           |
+|                 HEIGHT: 1 cm                                                 |
+|    RESIDENTIAL ADDRESS: 1 ok St ok NSW                                       |
+|             OCCUPATION: worker                                               |
+|CURRENT CRIMINAL STATUS: Released                                             |
+////////////////////////////////////////////////////////////////////////////////
+CRIMINAL HISTORY:
+No charges found.
+////////////////////////////////////////////////////////////////////////////////
+
+________________________________________________________________________________
+|                     ID: 02                                                   |
+|                   NAME: a a                                                  |
+|                 GENDER: M                                                    |
+|          DATE OF BIRTH: 01/01/0001                                           |
+|                 HEIGHT: 1 cm                                                 |
+|    RESIDENTIAL ADDRESS: 1 k St k k                                           |
+|             OCCUPATION: k                                                    |
+|CURRENT CRIMINAL STATUS: Fugitive                                             |
+////////////////////////////////////////////////////////////////////////////////
+CRIMINAL HISTORY:
+
+OFFENCE #0:
+DATE OF OFFENSE: 1/1/1
+LOCATION OF OFFENSE: n/a, n/a
+DESCRIPTION OF OFFENSE:
+something happened
+////////////////////////////////////////////////////////////////////////////////
+

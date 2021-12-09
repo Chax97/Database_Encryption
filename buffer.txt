@@ -1,0 +1,206 @@
+void addCrim(criminal_t criminals[], int crimCount)
+{
+    
+    int x, y, z, a;
+    
+        if(crimCount>MAX_NUM_OF_CRIMINALS)
+        {
+            printf("Database memory full.\nExiting...\n");
+            return;
+        }
+        char fn[MAX_NAME_LEN];
+        char ln[MAX_NAME_LEN];
+
+        printf("\n");
+        
+        printf("--- Basic Information ---\n");
+
+        printf("\nEnter first name > ");
+        printf("\033[1;31m");
+        scanf(" %s", fn);
+        printf("\033[0m");
+        strcpy(criminals[crimCount].firstName, fn);
+        
+        printf("Enter last name > ");
+        printf("\033[1;31m");
+        scanf(" %s", ln);
+        printf("\033[0m");
+        strcpy(criminals[crimCount].lastName, ln);
+
+        printf("Enter sex [M/F] > ");
+        scanf(" %c[\n]\n", criminals[crimCount].physique.sex);
+        
+        do {
+            printf("Enter date of birth separated by space [dd mm yyyy] > ");
+            scanf(" %d %d %d[\n]\n", 
+            &criminals[crimCount].dob.day, 
+            &criminals[crimCount].dob.month, 
+            &criminals[crimCount].dob.year);
+            
+            int x = dateIsValid(criminals[crimCount]);
+
+            if (x == 0) {
+                printf("\n Date is invalid \n");
+            }
+         } while (x == 0);
+        
+        /*dateIsValid(criminals[crimCount]);*/
+
+        printf("\nStatus selection\n"
+        "1. Fugitive\n"
+        "2. Incarcerated\n"
+        "3. Released\n");
+        printf("Enter current status > ");
+        int status;
+        scanf(" %d[\n]\n", &status);
+        switch(status)
+        {
+            case 1:
+            {
+                char inputStatus[] = "Fugitive";
+                strcpy(criminals[crimCount].currentStatus, inputStatus);
+                printf("Criminal is registered as a fugitive\n");
+                break;
+            }
+            case 2:
+            {
+                char inputStatus[] = "Incarcerated";
+                strcpy(criminals[crimCount].currentStatus, inputStatus);
+                printf("Criminal is registered as incarcerated\n");
+                break;
+            }
+            case 3:
+            {
+                char inputStatus[] = "Released";
+                strcpy(criminals[crimCount].currentStatus, inputStatus);
+                printf("Criminal has registered as released\n");
+                break;
+            }
+            default:
+                printf("Invalid input, please select from 1-3\n");
+                break;
+        }
+        
+        printf("\n--- Additional Information ---\n");
+
+        if(skip()==1){
+            return;
+        };
+        
+        printf("\nEnter height > ");
+        scanf(" %d[\n]\n", &criminals[crimCount].physique.height);
+        
+        skip();
+        printf("Enter features > ");
+        scanf(" %s[\n]\n", criminals[crimCount].physique.features);
+        
+        do{
+        skip();
+        printf("Enter Residential Address separated by space [StreetNumber StreetName Suburb  State] > ");
+        scanf(" %d %s %s %s[\n]\n", 
+        &criminals[crimCount].resAddress.streetNumber, 
+        criminals[crimCount].resAddress.streetName, 
+        criminals[crimCount].resAddress.suburb, 
+        criminals[crimCount].resAddress.state);
+        
+        int y = addressIsValid(criminals[crimCount].resAddress);
+         if (y == 0) {
+                printf("\n Residential Address is invalid \n");
+            }
+         } while (y == 0);
+        
+        skip();
+        printf("Enter occupation > ");
+        scanf(" %s[\n]\n", criminals[crimCount].occupation);
+
+        printf("\n--- Criminal History ---\n");
+
+        int offenceNum = 0; 
+        int breakout = 0;
+        char addChoice;
+        do
+        {
+            printf("\nCurrent number of registered offences under %s %s is %d", fn, ln, offenceNum);
+            printf("\nWould you like to register an offence? [Y/N] > ");
+            scanf("%c", &addChoice);
+            switch(addChoice)
+            {
+                case 'Y':
+                {
+                    offenceNum++;
+
+                    skip();
+                    printf("\nEnter summary of offence #%d > ",offenceNum);
+                    scanf(" %s[\n]\n", criminals[crimCount].crimHistory->charge);
+
+                    do{
+                    skip();
+                    printf("Enter date of occurrence [dd mm yyyy] > ");
+                    scanf(" %d %d %d[\n]\n", 
+                    &criminals[crimCount].crimHistory[offenceNum].occurrence.day, 
+                    &criminals[crimCount].crimHistory[offenceNum].occurrence.month, 
+                    &criminals[crimCount].crimHistory[offenceNum].occurrence.year);
+                    
+                    int a = dateIsValid(criminals[crimCount]);
+                    if (a == 0) {
+                                printf("\n Occurrence date entry is invalid \n");
+                            }
+                     } while (a == 0);
+
+                    do{
+                    skip();
+                    printf("Enter location of offence separated by space [StreetName Suburb] > ");
+                    scanf(" %s %s[\n]\n",  
+                    criminals[crimCount].crimHistory[offenceNum].crimLocation.streetName, 
+                    criminals[crimCount].crimHistory[offenceNum].crimLocation.suburb);
+                    
+                    int z = addressIsValid(criminals[crimCount].crimLocation);
+                    if (z == 0) {
+                                printf("\n criminal Location is invalid \n");
+                             }
+                    } while (z == 0);
+
+                    skip();
+                    printf("Enter name of officer who charged criminal > "); 
+                    scanf(" %s[\n]\n", criminals[crimCount].crimHistory[offenceNum].officer);
+
+                    skip();
+                    printf("Enter brief description of offence > ");
+                    scanf(" %s[\n]\n", criminals[crimCount].crimHistory[offenceNum].descrip);
+
+                    skip();
+                    printf("Enter officer statement > ");
+                    scanf(" %s[\n]\n", criminals[crimCount].crimHistory[offenceNum].offStatement);
+
+                    skip();
+                    printf("Enter victim statement > ");
+                    scanf(" %s[\n]\n", criminals[crimCount].crimHistory[offenceNum].victStatement);
+
+                    skip();
+                    printf("Enter witness statement > ");
+                    scanf(" %s[\n]\n", criminals[crimCount].crimHistory[offenceNum].witnStatement);
+
+                    skip();
+                    printf("Enter names of individuals involved > ");
+                    scanf(" %s[\n]\n", criminals[crimCount].crimHistory[offenceNum].whoInvolved);
+
+                    break;
+                }
+                case 'N':
+                {
+                    breakout = 1;
+                    break;
+                }
+                default:
+                printf("Invalid input, please input Y or N");
+            }
+        }while(breakout != 1);
+
+        criminals[crimCount].crimID = crimCount;
+        
+        skip();
+        image_to_bin(crimCount);
+        
+        /*printf("\n");
+        printf("Added criminal: \033[1;31mID# %02d\033[0m \033[1;31m%s %s\033[0m to the database with %d offences\n",crimCount, fn, ln, offenceNum);*/
+}

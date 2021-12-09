@@ -1,0 +1,20 @@
+add good coding practice criterions here:
+
+The general:
+    - 80 character limits
+    - correct indentation
+    - listing functions used at the top
+        e.g. #include <stdio.h> /* printf, scanf... */
+    - variable names make sense
+    - GOOD commenting explaining logic
+    - always passing array sizes with arrays (might have to check this one)
+
+Extra but important:
+    - ALWAYS checking if there was a file open error whenever opening a file
+    - CLOSING files after finished with them
+    - always initialize a pointer to NULL (i think)
+    - null terminating every string
+
+Naming conventions:
+    - structure names end with "_t"
+    - pointer names end with "p"

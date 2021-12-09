@@ -1,0 +1,74 @@
+how it works: it's basically a register of criminal scum
+
+1) user starts the program
+2) program prompts features menu
+3) user inputs their desired features
+4) to access certains features:
+    1. Add a criminal to the database
+    2. Edit a criminal in the database
+    3. Print all criminals inside the database
+    4. Print a specific criminal(s) by searching through search options
+    5. Save the current criminal entries to a database text file
+    6. 
+
+
+    - add criminal:
+        - adds info
+        - once database has been updated - COMPRESS AND ENCRYPT in another file
+    - edit criminal:
+        - programs asks for password to access the database DECRYPTION
+        - programs asks what the user wants to edit
+        - then it takes you to the field to edit
+        - asks to save to database as a confirmation (y/n)
+            > if yes it saves and takes you back main menu
+            > if no it takes you back to edit menu
+        - confirms data saved
+    - display criminals:
+        - programs asks for password to access the database DECRYPTION
+        - filter by criteria (name/age/crime type/none)
+        - displays list of criminals
+        - done with viewing (y/n)
+            > if yes it takes you back main menu
+            > if no it takes you back to filter by criteria
+    - 5. exit feature exit(0)
+
+features:
+- add criminals
+    - name
+    - ****** image ****** (if we want to try compress an image - extra for later)
+    - sex (M/F) p
+    - date of birth
+    - criminal ID
+    - occupation
+    - height p
+    - notable features (bald/tattoos/gang affiliations/serial killer) p
+    - current status (in cell/on the run/charge finished/sentence pending) 
+    - offenses offended (criminal charges)
+        - charge - eg intent to sell weed
+        - type of charge (murder/drug trafficking/shoplifting/jaywalking/plagiarism...)
+        - time and date of offence
+        - where was the offence?
+        - officer who charged them
+        - specify: brief description of what happened and why officer did what they did
+        - officer statement
+        - victim statement
+        - witness statement
+        - individuals involved
+        - why did the offence happen? (motives) -reason
+        
+- edit criminal
+    - criminal status
+    - height
+    - residence
+    - notable features (bald/tattoos/gang affiliations/serial killer)
+    - occupation
+
+- print criminal profile
+    - print all
+    - the specific type of crime
+        - options available: murder/drug trafficking/shoplifting/jaywalking/plagiarism...
+            - NOTE: this is all the same as th types of charges
+        - .................
+
+- save to database
+

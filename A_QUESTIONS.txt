@@ -1,0 +1,7 @@
+QUESTIONS TO ASK:
+1) my debug problem (shaman)
+2) do we always have to free a pointer after done with it? or when do we do it?
+3) compression isnt perfect is that ok (mention in bugs)
+4) if i wanted to implement multiple run time modes how ould i do it in the make file
+5) in the 'reasoning behind the design of choice' section, are we supposed to talk about 
+   the design of each major function or just generally about any part of code?

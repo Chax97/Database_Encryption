@@ -1,0 +1,45 @@
+struct date{
+    int day;
+    int month;
+    int year;
+};
+typedef struct date_t;
+
+struct offense{
+    char [] charge;
+    date_t occurrence; 
+    char [] officer;   
+};
+typedef struct offense offense_t;
+
+struct criminal{
+    char[] name;
+    int criminalID;
+    date_t dob; /*date of birth*/
+    offense_t criminal history; /*feature will  - lists all offenses with this person */
+};
+typedef struct criminal criminal_t;
+
+
+
+IN THE MAIN:
+array of criminals:
+criminal_t[] criminals;
+
+COMPRESS/DECOMPRESS - Shaman
+ENCRYPTION/DECRYPTION - Faisal
+
+COMPRESS/ENCRYPT - DECOMPRESS/DECRYPT: (research techniques)
+    - saves to a file called database_uncompressed
+    - compresses the data within database_uncompressed into another file database_compressed
+    - encrypts database_compressed into database_compressed_encrypted 
+    ******
+    when we're accessing:
+    - asks for password
+        > if not valid it prompts for password again [if >5 stops the program]
+        > if valid it continues
+    - decrypts database_compressed_encrypted
+    - decompresses above
+    -> begins accessing database
+
+
